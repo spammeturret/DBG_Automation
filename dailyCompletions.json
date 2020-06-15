@@ -1,8 +1,7 @@
 {
-    "dailyRewards": true, 
-    "dailyFreeGems": true, 
-    "dailyFriendship": true, 
-    "dailyQuests": true, 
-    "dailyFriendshipShop": true, 
-    "dailyFreeSummon": true
+    "daily_rewards": true, 
+    "daily_free_gems": true, 
+    "daily_friendship": true, 
+    "daily_quests": true, 
+    "daily_free_summon": true
 }
