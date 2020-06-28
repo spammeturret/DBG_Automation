@@ -31,13 +31,13 @@ class Rewinder:
     def __init__(self):
         self.skill_index = 0
         self.skill_list = [
-            image.skill_multi_elixir.value,
-            image.skill_multi_dmg.value,
-            image.skill_multi_mob_dmg.value,
-            image.skill_multi_boss_dmg.value,
-            image.skill_multi_crit_dmg.value,
-            image.skill_multi_hero_dmg.value,
-            image.skill_multi_gold.value
+            image.skill_multi_elixir.value
+            # image.skill_multi_dmg.value,
+            # image.skill_multi_mob_dmg.value,
+            # image.skill_multi_boss_dmg.value,
+            # image.skill_multi_crit_dmg.value,
+            # image.skill_multi_hero_dmg.value,
+            # image.skill_multi_gold.value
         ]
 
 # imgMultiElixir,

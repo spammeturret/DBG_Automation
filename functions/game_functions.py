@@ -8,26 +8,26 @@ import pyautogui
 
 class image(enum.Enum):
     #Campaign Image Paths
-    bluestacks_logo = "C:\\project\\PY_AUTO\\img\\ads\\bs_logo.PNG"
-    stop_macro = "C:\\project\\PY_AUTO\\img\\battle\\macro_stop.PNG"
-    battle_button = "C:\\project\\PY_AUTO\\img\\battle\\battle.PNG"
+    bluestacks_logo = "C:\\project\\DBG_Automation\\img\\ads\\bs_logo.PNG"
+    stop_macro = "C:\\project\\DBG_Automation\\img\\battle\\macro_stop.PNG"
+    battle_button = "C:\\project\\DBG_Automation\\img\\battle\\battle.PNG"
     #Restart Image Paths
-    close_app = "C:\\project\\PY_AUTO\\img\\others\\app_close.PNG"
-    app_icon = "C:\\project\\PY_AUTO\\img\\others\\app_icon.PNG"
-    app_tab = "C:\\project\\PY_AUTO\\img\\others\\app_tab.PNG"
-    home_tab = "C:\\project\\PY_AUTO\\img\\others\\home_tab.PNG"
-    welcome_prompt = "C:\\project\\PY_AUTO\\img\\others\\welcome_prompt.PNG"
-    welcome_text = "C:\\project\\PY_AUTO\\img\\others\\welcome_text.PNG"
+    close_app = "C:\\project\\DBG_Automation\\img\\others\\app_close.PNG"
+    app_icon = "C:\\project\\DBG_Automation\\img\\others\\app_icon.PNG"
+    app_tab = "C:\\project\\DBG_Automation\\img\\others\\app_tab.PNG"
+    home_tab = "C:\\project\\DBG_Automation\\img\\others\\home_tab.PNG"
+    welcome_prompt = "C:\\project\\DBG_Automation\\img\\others\\welcome_prompt.PNG"
+    welcome_text = "C:\\project\\DBG_Automation\\img\\others\\welcome_text.PNG"
     #Daily Image Paths
-    title_check_in = "C:\\project\\PY_AUTO\\img\\daily\\titleCheckIn.PNG"
-    check_in_claim = "C:\\project\\PY_AUTO\\img\\daily\\checkInClaim.PNG"
-    check_in_close = "C:\\project\\PY_AUTO\\img\\daily\\checkInClose.PNG"
-    weapons_icon = "C:\\project\\PY_AUTO\\img\\daily\\weapons_icon.PNG"
-    confirm_button = "C:\\project\\PY_AUTO\\img\\daily\\summon_confirm.PNG"
-    skill_knockback_icon = "C:\\project\\PY_AUTO\\img\\battle\\skill_knock_back.PNG"
+    title_check_in = "C:\\project\\DBG_Automation\\img\\daily\\titleCheckIn.PNG"
+    check_in_claim = "C:\\project\\DBG_Automation\\img\\daily\\checkInClaim.PNG"
+    check_in_close = "C:\\project\\DBG_Automation\\img\\daily\\checkInClose.PNG"
+    weapons_icon = "C:\\project\\DBG_Automation\\img\\daily\\weapons_icon.PNG"
+    confirm_button = "C:\\project\\DBG_Automation\\img\\daily\\summon_confirm.PNG"
+    skill_knockback_icon = "C:\\project\\DBG_Automation\\img\\battle\\skill_knock_back.PNG"
 
-    progress_update_popup = "C:\\project\\PY_AUTO\\img\\daily\\progress_update_popup.PNG"
-    progress_update_claim = "C:\\project\\PY_AUTO\\img\\daily\\progress_update_claim.PNG"
+    progress_update_popup = "C:\\project\\DBG_Automation\\img\\daily\\progress_update_popup.PNG"
+    progress_update_claim = "C:\\project\\DBG_Automation\\img\\daily\\progress_update_claim.PNG"
 
 
 def watchAds(adButton, verifyImg):
@@ -109,3 +109,5 @@ def level_battle_skill(img_skill):
     "starting level_battle_skill"
     event.search_click_offset(img_skill, 435, 34)
     print("done")
+
+#def sell_gear():

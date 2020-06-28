@@ -112,13 +112,14 @@ def dungeon(timeLimit):
 
 def expedition(imgPathDifficulty):
     event.log("FUNCTION", "battle.expedition", "Starting Expedition Function")
-    event.search_click(image.battle_button.value)
-    event.search_click(image.expedition.value)
-    time.sleep(1)
+    event.search_click(image.battle_button.value,1)
+    event.search_click(image.expedition.value, 1)
     event.search_click(imgPathDifficulty)
     event.search_click(image.ok_button.value)
     game.macro_start(image.spell_macro.value)
-    imagesearch_loop(image.small_back.value, 1)
+    while event.find_image(image.small_back.value, True) == False:
+        time.sleep(0.5)
+    #imagesearch_loop(image.small_back.value, 1)
     exit_battle(image.small_back.value)
 
 def exit_battle (exit_button):
@@ -166,4 +167,4 @@ def additional_quest_battles(quest):
             hunt(image.leviathan_button.value, image.leviathan_1.value, 1)
         if quest.quest_list["status"]["asmodeus"] == True:
             print("asmodeus hunt quest: True")
-            hunt(image.asmodeus_button.value, image.asmodeus_1, 3)
+            hunt(image.asmodeus_button.value, image.asmodeus_1.value, 3)

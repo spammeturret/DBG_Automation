@@ -44,7 +44,8 @@ while x == 0:
     # Battle 1
         battle.campaign()
         game.check_menu_popups(quest, reward, purchase, daily_status)
-        game.level_battle_skill(image.skill_devastation.value)
+        #game.level_battle_skill(image.skill_devastation.value)
+        game.level_battle_skill(image.skill_damage_icon.value)
     # Battle 2
         # battle.campaign()
         # game.check_menu_popups(quest, reward, purchase, daily_status)
@@ -56,8 +57,8 @@ while x == 0:
         # battle.dungeon(60)
         # game.check_menu_popups(quest, reward, purchase, daily_status)
         """Extra Excavation Battle"""
-        battle.expedition(image.expedition_hell.value)
-        game.check_menu_popups(quest, reward, purchase, daily_status)
+        # battle.expedition(image.expedition_hell.value)
+        # game.check_menu_popups(quest, reward, purchase, daily_status)
         """check if all dailies have been completed"""
         if daily_status["status"]["all_completed"] == False:
             daily_status["status"]["all_completed"] = dailies.update_all(quest, reward, purchase)
