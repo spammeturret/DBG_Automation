@@ -9,34 +9,34 @@ from python_imagesearch.imagesearch import imagesearch, imagesearcharea, region_
 
 class image(enum.Enum):
     #General
-    battle_button = "C:\\project\\PY_AUTO\\img\\battle\\battle.PNG"
-    weapons_icon = "C:\\project\\PY_AUTO\\img\\daily\\weapons_icon.PNG"
+    battle_button = "C:\\project\\DBG_Automation\\img\\battle\\battle.PNG"
+    weapons_icon = "C:\\project\\DBG_Automation\\img\\daily\\weapons_icon.PNG"
     #Friendship Image Paths
-    social_icon = "C:\\project\\PY_AUTO\\img\\daily\\friendship\\social_icon.PNG"
-    friends_menu = "C:\\project\\PY_AUTO\\img\\daily\\friendship\\friends.PNG"
-    friends_gift_all = "C:\\project\\PY_AUTO\\img\\daily\\friendship\\gift_all.PNG"
-    close = "C:\\project\\PY_AUTO\\img\\daily\\friendship\\close.PNG"
+    social_icon = "C:\\project\\DBG_Automation\\img\\daily\\friendship\\social_icon.PNG"
+    friends_menu = "C:\\project\\DBG_Automation\\img\\daily\\friendship\\friends.PNG"
+    friends_gift_all = "C:\\project\\DBG_Automation\\img\\daily\\friendship\\gift_all.PNG"
+    close = "C:\\project\\DBG_Automation\\img\\daily\\friendship\\close.PNG"
     #Ads Image Paths
-    ad_ruby = "C:\\project\\PY_AUTO\\img\\ads\\adRuby.PNG"
-    ad_ruby_invalid = "C:\\project\\PY_AUTO\\img\\ads\\adRubyInvalid.PNG"
-    ad_2x_gold = "C:\\project\\PY_AUTO\\img\\ads\\ad2xGold.PNG"
-    bluestacks_logo = "C:\\project\\PY_AUTO\\img\\ads\\bs_logo.PNG"
-    store_rubies = "C:\\project\\PY_AUTO\\img\\ads\\storeRubies.PNG"
-    ads_close = "C:\\project\\PY_AUTO\\img\\ads\\close.PNG"
+    ad_ruby = "C:\\project\\DBG_Automation\\img\\ads\\adRuby.PNG"
+    ad_ruby_invalid = "C:\\project\\DBG_Automation\\img\\ads\\adRubyInvalid.PNG"
+    ad_2x_gold = "C:\\project\\DBG_Automation\\img\\ads\\ad2xGold.PNG"
+    bluestacks_logo = "C:\\project\\DBG_Automation\\img\\ads\\bs_logo.PNG"
+    store_rubies = "C:\\project\\DBG_Automation\\img\\ads\\storeRubies.PNG"
+    ads_close = "C:\\project\\DBG_Automation\\img\\ads\\close.PNG"
     #Store Image Paths
-    store_icon = "C:\\project\\PY_AUTO\\img\\daily\\store\\store_icon.PNG"
-    store_close = "C:\\project\\PY_AUTO\\img\\daily\\store\\store_close.PNG"
-    store_friendship = "C:\\project\\PY_AUTO\\img\\daily\\store\\store_friendship.PNG"
-    store_friendship_valid = "C:\\project\\PY_AUTO\\img\\daily\\store\\store_friendship_valid.PNG"
-    store_friendship_invalid = "C:\\project\\PY_AUTO\\img\\daily\\store\\store_friendship_invalid.PNG"
-    store_friendship_confirm = "C:\\project\\PY_AUTO\\img\\daily\\store\\store_friendship_confirm.PNG"
+    store_icon = "C:\\project\\DBG_Automation\\img\\daily\\store\\store_icon.PNG"
+    store_close = "C:\\project\\DBG_Automation\\img\\daily\\store\\store_close.PNG"
+    store_friendship = "C:\\project\\DBG_Automation\\img\\daily\\store\\store_friendship.PNG"
+    store_friendship_valid = "C:\\project\\DBG_Automation\\img\\daily\\store\\store_friendship_valid.PNG"
+    store_friendship_invalid = "C:\\project\\DBG_Automation\\img\\daily\\store\\store_friendship_invalid.PNG"
+    store_friendship_confirm = "C:\\project\\DBG_Automation\\img\\daily\\store\\store_friendship_confirm.PNG"
     #Character Image Paths
-    character_icon = "C:\\project\\PY_AUTO\\img\\daily\\character_icon.PNG"
-    character_ticket = "C:\\project\\PY_AUTO\\img\\daily\\character_ticket.PNG"
-    classic_summon = "C:\\project\\PY_AUTO\\img\\daily\\classic_summon.PNG"
-    free_summon = "C:\\project\\PY_AUTO\\img\\daily\\free_summon.PNG"
-    summon_confirm = "C:\\project\\PY_AUTO\\img\\daily\\summon_confirm.PNG"
-    summon_close = "C:\\project\\PY_AUTO\\img\\daily\\summon_close.PNG"
+    character_icon = "C:\\project\\DBG_Automation\\img\\daily\\character_icon.PNG"
+    character_ticket = "C:\\project\\DBG_Automation\\img\\daily\\character_ticket.PNG"
+    classic_summon = "C:\\project\\DBG_Automation\\img\\daily\\classic_summon.PNG"
+    free_summon = "C:\\project\\DBG_Automation\\img\\daily\\free_summon.PNG"
+    summon_confirm = "C:\\project\\DBG_Automation\\img\\daily\\summon_confirm.PNG"
+    summon_close = "C:\\project\\DBG_Automation\\img\\daily\\summon_close.PNG"
 
 class Rewards:
     def __init__(self,rewards_list):

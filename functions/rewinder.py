@@ -4,25 +4,25 @@ import pyautogui
 import game_functions as game
 
 class image(enum.Enum):
-    skill_multi_elixir = "C:\\project\\PY_AUTO\\img\\skills\\elixir_mastery.PNG"
-    skill_add_dmg = "C:\\project\\PY_AUTO\\img\\skills\\hidden_strength.PNG"
-    skill_multi_dmg = "C:\\project\\PY_AUTO\\img\\skills\\untapped_power.PNG"
-    skill_multi_mob_dmg = "C:\\project\\PY_AUTO\\img\\skills\\mob_slayer.PNG"
-    skill_multi_boss_dmg = "C:\\project\\PY_AUTO\\img\\skills\\boss_slayer.PNG"
-    skill_add_crit_dmg = "C:\\project\\PY_AUTO\\img\\skills\\explosive_strength_scroll.PNG"
-    skill_multi_crit_dmg = "C:\\project\\PY_AUTO\\img\\skills\\beautiful_disaster_scroll.PNG"
-    skill_multi_hero_dmg = "C:\\project\\PY_AUTO\\img\\skills\\inspire_scroll.PNG"
-    skill_multi_gold = "C:\\project\\PY_AUTO\\img\\skills\\hard_labour_scroll.PNG"
+    skill_multi_elixir = "C:\\project\\DBG_Automation\\img\\skills\\elixir_mastery.PNG"
+    skill_add_dmg = "C:\\project\\DBG_Automation\\img\\skills\\hidden_strength.PNG"
+    skill_multi_dmg = "C:\\project\\DBG_Automation\\img\\skills\\untapped_power.PNG"
+    skill_multi_mob_dmg = "C:\\project\\DBG_Automation\\img\\skills\\mob_slayer.PNG"
+    skill_multi_boss_dmg = "C:\\project\\DBG_Automation\\img\\skills\\boss_slayer.PNG"
+    skill_add_crit_dmg = "C:\\project\\DBG_Automation\\img\\skills\\explosive_strength_scroll.PNG"
+    skill_multi_crit_dmg = "C:\\project\\DBG_Automation\\img\\skills\\beautiful_disaster_scroll.PNG"
+    skill_multi_hero_dmg = "C:\\project\\DBG_Automation\\img\\skills\\inspire_scroll.PNG"
+    skill_multi_gold = "C:\\project\\DBG_Automation\\img\\skills\\hard_labour_scroll.PNG"
 
     #Rewind Image Paths
-    rewind_menu = "C:\\project\\PY_AUTO\\img\\rewind\\rewind.png"
-    rewind_menu_active = "C:\\project\\PY_AUTO\\img\\rewind\\rewind_active.png"
-    rewind_select = "C:\\project\\PY_AUTO\\img\\rewind\\elixir_icon.png"
-    rewind_confirm = "C:\\project\\PY_AUTO\\img\\rewind\\rewind_confirm.png"
-    ok_button = "C:\\project\\PY_AUTO\\img\\rewind\\ok.png"
-    rewind_locked = "C:\\project\\PY_AUTO\\img\\rewind\\rewind_error4.PNG"
-    stat_icon = "C:\\project\\PY_AUTO\\img\\rewind\\Stat.png"
-    skill_devastation = "C:\\project\\PY_AUTO\\img\\battle\\skill_devastation.PNG"
+    rewind_menu = "C:\\project\\DBG_Automation\\img\\rewind\\rewind.png"
+    rewind_menu_active = "C:\\project\\DBG_Automation\\img\\rewind\\rewind_active.png"
+    rewind_select = "C:\\project\\DBG_Automation\\img\\rewind\\elixir_icon.png"
+    rewind_confirm = "C:\\project\\DBG_Automation\\img\\rewind\\rewind_confirm.png"
+    ok_button = "C:\\project\\DBG_Automation\\img\\rewind\\ok.png"
+    rewind_locked = "C:\\project\\DBG_Automation\\img\\rewind\\rewind_error4.PNG"
+    stat_icon = "C:\\project\\DBG_Automation\\img\\rewind\\Stat.png"
+    skill_devastation = "C:\\project\\DBG_Automation\\img\\battle\\skill_devastation.PNG"
 
     #skills
 

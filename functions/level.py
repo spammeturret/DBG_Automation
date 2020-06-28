@@ -4,20 +4,20 @@ import game_functions as game
 import enum
 
 class image(enum.Enum):
-    rewind_menu = "C:\\project\\PY_AUTO\\img\\rewind\\rewind.png"
-    #ok_button = "C:\\project\\PY_AUTO\\img\\rewind\\ok.png"
-    skill_damage = "C:\\project\\PY_AUTO\\img\\battle\\skillDamage.PNG"
-    skill_damage_icon = "C:\\project\\PY_AUTO\\img\\battle\\skillDamageIcon.PNG"
+    rewind_menu = "C:\\project\\DBG_Automation\\img\\rewind\\rewind.png"
+    #ok_button = "C:\\project\\DBG_Automation\\img\\rewind\\ok.png"
+    skill_damage = "C:\\project\\DBG_Automation\\img\\battle\\skillDamage.PNG"
+    skill_damage_icon = "C:\\project\\DBG_Automation\\img\\battle\\skillDamageIcon.PNG"
     #Rewind Image Paths
-    #rewind_menu = "C:\\project\\PY_AUTO\\img\\rewind\\rewind.png"
-    rewind_menu_active = "C:\\project\\PY_AUTO\\img\\rewind\\rewind_active.png"
-    rewind_select = "C:\\project\\PY_AUTO\\img\\rewind\\elixir_icon.png"
-    rewind_confirm = "C:\\project\\PY_AUTO\\img\\rewind\\rewind_confirm.png"
-    ok_button = "C:\\project\\PY_AUTO\\img\\rewind\\ok.png"
-    rewind_locked = "C:\\project\\PY_AUTO\\img\\rewind\\rewind_error4.PNG"
-    stat_icon = "C:\\project\\PY_AUTO\\img\\rewind\\Stat.png"
+    #rewind_menu = "C:\\project\\DBG_Automation\\img\\rewind\\rewind.png"
+    rewind_menu_active = "C:\\project\\DBG_Automation\\img\\rewind\\rewind_active.png"
+    rewind_select = "C:\\project\\DBG_Automation\\img\\rewind\\elixir_icon.png"
+    rewind_confirm = "C:\\project\\DBG_Automation\\img\\rewind\\rewind_confirm.png"
+    ok_button = "C:\\project\\DBG_Automation\\img\\rewind\\ok.png"
+    rewind_locked = "C:\\project\\DBG_Automation\\img\\rewind\\rewind_error4.PNG"
+    stat_icon = "C:\\project\\DBG_Automation\\img\\rewind\\Stat.png"
 
-    skill_devastation = "C:\\project\\PY_AUTO\\img\\battle\\skill_devastation.PNG"
+    skill_devastation = "C:\\project\\DBG_Automation\\img\\battle\\skill_devastation.PNG"
 
 
 def levelSkill(skillproperties):

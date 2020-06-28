@@ -8,19 +8,19 @@ from python_imagesearch.imagesearch import imagesearch, imagesearcharea, region_
 
 
 class image(enum.Enum):
-    quest_icon = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_icon.PNG"
-    quest_claim = "C:\\project\\PY_AUTO\\img\\daily\\quests\\questClaim.PNG"
-    quest_dungeon = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_dungeon.PNG"
-    quest_spells =  "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_spells.PNG"
-    quest_expedition = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_expedition.PNG"
-    quest_leviathan = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_leviathan.PNG"
-    quest_asmodeus = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_asmodeus.PNG"
-    quest_claim_x5 = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_claim_x5.PNG"
-    quest_claim_x15 = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_claim_x15.PNG"
-    quest_scroll_down = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_scroll_down.PNG"
-    close_quest = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_close.PNG"
-    quest_completed_all = "C:\\project\\PY_AUTO\\img\\daily\\quests\\all_quests_completed.PNG"
-    quest_window_title = "C:\\project\\PY_AUTO\\img\\daily\\quests\\quest_window_title.PNG"
+    quest_icon = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_icon.PNG"
+    quest_claim = "C:\\project\\DBG_Automation\\img\\daily\\quests\\questClaim.PNG"
+    quest_dungeon = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_dungeon.PNG"
+    quest_spells =  "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_spells.PNG"
+    quest_expedition = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_expedition.PNG"
+    quest_leviathan = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_leviathan.PNG"
+    quest_asmodeus = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_asmodeus.PNG"
+    quest_claim_x5 = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_claim_x5.PNG"
+    quest_claim_x15 = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_claim_x15.PNG"
+    quest_scroll_down = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_scroll_down.PNG"
+    close_quest = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_close.PNG"
+    quest_completed_all = "C:\\project\\DBG_Automation\\img\\daily\\quests\\all_quests_completed.PNG"
+    quest_window_title = "C:\\project\\DBG_Automation\\img\\daily\\quests\\quest_window_title.PNG"
 
 class Quest:
     def __init__(self,quest_list):
