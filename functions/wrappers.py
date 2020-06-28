@@ -1,5 +1,5 @@
 import pyautogui, time, exceptions
-from python_imagesearch.imagesearch import imagesearch, click_image, click_image_offset
+from python_imagesearch.imagesearch import imagesearch, imagesearcharea, click_image, click_image_offset
 from datetime import datetime
 
 def find_image(image_path, print_suppression = False):
@@ -9,6 +9,20 @@ def find_image(image_path, print_suppression = False):
     Output: True if found, false if not found.
     '''
     pos = imagesearch(image_path)
+    
+    if pos[0] != -1:
+        if print_suppression == False:
+            txt_var = "Image Found:" + get_img_name(image_path)
+            log("INFO", "wrapper.find_image", txt_var)
+        return True
+    else:
+        if print_suppression == False:
+            txt_var = "Image Not Found - " + get_img_name(image_path)
+            log("WARNING", "wrapper.find_image", txt_var)
+        return False
+
+def find_image_area(image_path, x1, y1, x2, y2, print_suppression = False):
+    pos = imagesearcharea(image_path, x1, y1, x2, y2)
     
     if pos[0] != -1:
         if print_suppression == False:

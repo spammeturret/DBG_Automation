@@ -129,6 +129,7 @@ def exit_battle (exit_button):
         time.sleep(3)
 
 def hunt(boss_type, level, repeat_number):
+    """Input: What Boss to fight, what level to fight at, how many times to fight"""
     i = 0
     event.search_click(image.battle_button.value)
     event.search_click(image.hunt.value)
@@ -144,13 +145,15 @@ def hunt(boss_type, level, repeat_number):
             if i == repeat_number:
                 print("loop - exit")
                 event.search_click(image.stop_macro.value, 0)
-                event.click_next_screen_validate(image.back_button.value,image.battle_button.value,click_limit= 20)
+                exit_battle(image.back_button.value)
+                #event.click_next_screen_validate(image.back_button.value,image.battle_button.value,click_limit= 20)
                 return
             else:
                 while event.find_image(image.hunt_over.value) == True or event.find_image(image.insufficient_slots.value) == True:
                     if event.find_image(image.insufficient_slots.value) == True:
                         event.search_click(image.stop_macro.value)
-                        event.click_next_screen_validate(image.ok_button.value,image.battle_button.value,click_limit= 20)
+                        exit_battle(image.back_button.value)
+                        #event.click_next_screen_validate(image.ok_button.value,image.battle_button.value,click_limit= 20)
                         return
                     time.sleep(1)
 

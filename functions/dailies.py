@@ -98,6 +98,11 @@ def update_purchases(purchase):
     if status != False:
         file.save_json(status)
     
+    status = purchase.spend_fossils()
+    print(status)
+    if status != False:
+        file.save_json(status)
+    
     for value in status.values():
         if value == False:
             return False
