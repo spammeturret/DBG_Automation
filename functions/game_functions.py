@@ -28,7 +28,8 @@ class image(enum.Enum):
 
     progress_update_popup = "C:\\project\\DBG_Automation\\img\\daily\\progress_update_popup.PNG"
     progress_update_claim = "C:\\project\\DBG_Automation\\img\\daily\\progress_update_claim.PNG"
-
+    #Anti-Cheat Paths
+    click_prompt = "C:\\project\\DBG_Automation\\img\\anti-cheat\\click.PNG"
 
 def watchAds(adButton, verifyImg):
     event.click_button_validate(adButton,exceptions.ad_refresh_error)
@@ -55,6 +56,14 @@ def restart_game():
     
 #     save_dailyCompletions("dailyRewards", flag)
 
+def complete_idle_check():
+    """
+    input: none
+    output: none
+    """
+    while event.find_image(image.click_prompt.value) == True:
+        event.search_click(image.click_prompt.value)
+    print ("Idle check clicker completed")
 
 
 def check_menu_popups(quest, reward, purchase, json_daily_status):
@@ -67,6 +76,8 @@ def check_menu_popups(quest, reward, purchase, json_daily_status):
             clear_daily_popup(quest, reward, purchase, json_daily_status)
         elif event.find_image(image.progress_update_popup.value) == True:
             event.search_click(image.progress_update_claim.value)
+        elif event.find_image(image.click_prompt.value) == True:
+            complete_idle_check()
         else:
             return "none"
 

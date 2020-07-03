@@ -15,6 +15,7 @@ class image(enum.Enum):
     expedition_hell = "C:\\project\\DBG_Automation\\img\\battle\\expedition\\expedition_hell.PNG"
     leviathan_button = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\leviathan_button.PNG"
     leviathan_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\leviathan_1.PNG"
+    cheat_click = "C:\\project\\DBG_Automation\\img\\anti-cheat\\click.png"
 
 #Initialisation
 json_dailies = "C:\\project\\DBG_Automation\\data\\dailies.json"
@@ -37,36 +38,38 @@ rewinder = rewinder.Rewinder()
 #Main Loop
 x = 0
 
-while x == 0:
-    try:
-        if daily_status["status"]["all_completed"] == False:
-            daily_status["status"]["all_completed"] = dailies.update_all(quest, reward, purchase)
-            file.save_json(daily_status)
-        # game.check_menu_popups(quest, reward, purchase, daily_status)
-        # """Battle 1"""
-        # battle.campaign()
-        # game.check_menu_popups(quest, reward, purchase, daily_status)
-        # #game.level_battle_skill(image.skill_devastation.value)
-        # game.level_battle_skill(image.skill_damage_icon.value)
-        # """Battle 2"""
-        # # battle.campaign()
-        # # game.check_menu_popups(quest, reward, purchase, daily_status)
-        # # game.level_battle_skill(image.skill_damage_icon.value)
-        # """Extra Quest Battle"""
-        # battle.additional_quest_battles(quest)
-        # game.check_menu_popups(quest, reward, purchase, daily_status)
-        # """Extra Dungeon Battle"""
-        # # battle.dungeon(60)
-        # # game.check_menu_popups(quest, reward, purchase, daily_status)
-        # """Extra Excavation Battle"""
-        # # battle.expedition(image.expedition_hell.value)
-        # # game.check_menu_popups(quest, reward, purchase, daily_status)
-        # """Dailies Subroutine"""
-        # if daily_status["status"]["all_completed"] == False:
-        #     daily_status["status"]["all_completed"] = dailies.update_all(quest, reward, purchase)
-        #     file.save_json(daily_status)
-        # """Rewind"""
-        # rewinder.rewind()
-        # rewinder.level_skill()
-    except:
-        game.restart_game()
+game.complete_idle_check()
+# while x == 0:
+#     try:
+        
+#         # if daily_status["status"]["all_completed"] == False:
+#         #     daily_status["status"]["all_completed"] = dailies.update_all(quest, reward, purchase)
+#         #     file.save_json(daily_status)
+#         # game.check_menu_popups(quest, reward, purchase, daily_status)
+#         # """Battle 1"""
+#         # battle.campaign()
+#         # game.check_menu_popups(quest, reward, purchase, daily_status)
+#         # #game.level_battle_skill(image.skill_devastation.value)
+#         # game.level_battle_skill(image.skill_damage_icon.value)
+#         # """Battle 2"""
+#         # # battle.campaign()
+#         # # game.check_menu_popups(quest, reward, purchase, daily_status)
+#         # # game.level_battle_skill(image.skill_damage_icon.value)
+#         # """Extra Quest Battle"""
+#         # battle.additional_quest_battles(quest)
+#         # game.check_menu_popups(quest, reward, purchase, daily_status)
+#         # """Extra Dungeon Battle"""
+#         # # battle.dungeon(60)
+#         # # game.check_menu_popups(quest, reward, purchase, daily_status)
+#         # """Extra Excavation Battle"""
+#         # # battle.expedition(image.expedition_hell.value)
+#         # # game.check_menu_popups(quest, reward, purchase, daily_status)
+#         # """Dailies Subroutine"""
+#         # if daily_status["status"]["all_completed"] == False:
+#         #     daily_status["status"]["all_completed"] = dailies.update_all(quest, reward, purchase)
+#         #     file.save_json(daily_status)
+#         # """Rewind"""
+#         # rewinder.rewind()
+#         # rewinder.level_skill()
+#     except:
+#         game.restart_game()

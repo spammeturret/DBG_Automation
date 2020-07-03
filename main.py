@@ -12,6 +12,7 @@ import wrappers as event
 class image(enum.Enum):
     skill_damage_icon = "C:\\project\\DBG_Automation\\img\\battle\\skillDamageIcon.PNG"
     skill_devastation = "C:\\project\\DBG_Automation\\img\\battle\\skill_devastation.PNG"
+    skill_crit_chance = "C:\\project\\DBG_Automation\\img\\battle\\skill_critchance.PNG"
     expedition_hell = "C:\\project\\DBG_Automation\\img\\battle\\expedition\\expedition_hell.PNG"
     leviathan_button = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\leviathan_button.PNG"
     leviathan_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\leviathan_1.PNG"
@@ -41,10 +42,11 @@ while x == 0:
     try:
         game.check_menu_popups(quest, reward, purchase, daily_status)
         """Battle 1"""
+        game.level_battle_skill(image.skill_crit_chance.value)
         battle.campaign()
         game.check_menu_popups(quest, reward, purchase, daily_status)
         #game.level_battle_skill(image.skill_devastation.value)
-        game.level_battle_skill(image.skill_damage_icon.value)
+        game.level_battle_skill(image.skill_crit_chance.value)
         """Battle 2"""
         # battle.campaign()
         # game.check_menu_popups(quest, reward, purchase, daily_status)
