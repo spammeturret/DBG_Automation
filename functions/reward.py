@@ -83,7 +83,10 @@ class Rewards:
                 event.click_next_screen_validate_offset(image.bluestacks_logo.value, 1272, 73, image.summon_confirm.value)
                 event.search_click(image.summon_confirm.value)
                 self.rewards_list["status"]["daily_free_summon"] = True
-                event.click_next_screen_validate(image.summon_close.value, image.weapons_icon.value)
+            else:
+                self.rewards_list["status"]["daily_free_summon"] = True
+            event.click_next_screen_validate(image.summon_close.value, image.weapons_icon.value)
+                
                 
         return self.rewards_list
 

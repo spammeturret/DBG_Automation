@@ -48,6 +48,7 @@ class image(enum.Enum):
     #Hunt Image Paths
     hunt = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\hunt_button.PNG"
     hunt_over = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\hunt_over.PNG"
+    hunt_close = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\hunt_close.PNG"
     insufficient_slots = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\insufficient_slots.PNG"
     asmodeus_button = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\asmodeus_button.PNG"
     asmodeus_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\asmodeus_1.PNG"
@@ -59,6 +60,7 @@ class image(enum.Enum):
     belphegor_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\belphegor_1.PNG"
     mammon_button = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\mammon_button.PNG"
     mammon_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\mammon_1.PNG"
+
 
 
 
@@ -130,32 +132,47 @@ def exit_battle (exit_button):
 
 def hunt(boss_type, level, repeat_number):
     """Input: What Boss to fight, what level to fight at, how many times to fight"""
+    exit_flag = False
+    inventory_full_flag = False
     i = 0
     event.search_click(image.battle_button.value)
     event.search_click(image.hunt.value)
     event.search_click(boss_type)
-    time.sleep(0.5)
     event.search_click(level)
-    event.search_click(image.ok_button.value)
-    game.macro_start(image.normal_macro.value)
-    while i < repeat_number:
-        if event.find_image(image.hunt_over.value, True) == True:
-            i += 1
-            print("Hunt Count:", i)
-            if i == repeat_number:
-                print("loop - exit")
-                event.search_click(image.stop_macro.value, 0)
-                exit_battle(image.back_button.value)
-                #event.click_next_screen_validate(image.back_button.value,image.battle_button.value,click_limit= 20)
-                return
-            else:
-                while event.find_image(image.hunt_over.value) == True or event.find_image(image.insufficient_slots.value) == True:
-                    if event.find_image(image.insufficient_slots.value) == True:
-                        event.search_click(image.stop_macro.value)
+    time.sleep(0.5)
+    if event.find_image(image.insufficient_slots.value) == True:
+        print("test")
+        inventory_full_flag = True
+        event.search_click(image.ok_button.value)
+        event.search_click(image.hunt_close.value)
+    
+    print(inventory_full_flag)
+
+    if inventory_full_flag == False:
+        event.search_click(image.ok_button.value)
+        game.macro_start(image.normal_macro.value)
+        while i < repeat_number or exit_flag == True:
+            if event.find_image(image.hunt_over.value, True) == True:
+                i += 1
+                print("Hunt Count:", i)
+                while event.find_image(image.hunt_over.value, True) == True:
+                #If it has repeated enough, exit battle
+                    if i == repeat_number:
+                        exit_flag = True
+                        print("loop - exit")
+                        event.search_click(image.stop_macro.value, 0)
                         exit_battle(image.back_button.value)
-                        #event.click_next_screen_validate(image.ok_button.value,image.battle_button.value,click_limit= 20)
-                        return
-                    time.sleep(1)
+                        #event.click_next_screen_validate(image.back_button.value,image.battle_button.value,click_limit= 20)
+                    #if it hasnt repeated enough times, check for items full
+                    elif event.find_image(image.insufficient_slots.value, True) == True:
+                        inventory_full_flag = True
+                        exit_flag = True
+                        event.search_click(image.stop_macro.value)
+                        exit_battle(image.ok_button.value)
+                        #exit_battle(image.back_button.value)
+            
+    if inventory_full_flag == True:
+        game.sell_hunt_gear()
 
 def additional_quest_battles(quest):
     if quest.is_completed() == False:

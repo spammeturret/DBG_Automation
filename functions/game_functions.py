@@ -28,6 +28,18 @@ class image(enum.Enum):
 
     progress_update_popup = "C:\\project\\DBG_Automation\\img\\daily\\progress_update_popup.PNG"
     progress_update_claim = "C:\\project\\DBG_Automation\\img\\daily\\progress_update_claim.PNG"
+    
+    #Gear Image PAths
+    bs_logo = "C:\\project\\DBG_Automation\\img\\ads\\bs_logo.PNG"
+    weapons = "C:\\project\\DBG_Automation\\img\\gear\\weapons.PNG"
+    gears = "C:\\project\\DBG_Automation\\img\\gear\\gears.PNG"
+    helmet_tab = "C:\\project\\DBG_Automation\\img\\gear\\helmet_tab.PNG"
+    armour_tab = "C:\\project\\DBG_Automation\\img\\gear\\armour_tab.PNG"
+    boots_tab = "C:\\project\\DBG_Automation\\img\\gear\\boots_tab.PNG"
+    ring_tab = "C:\\project\\DBG_Automation\\img\\gear\\ring_tab.PNG"
+    sell_button = "C:\\project\\DBG_Automation\\img\\gear\\sell_button.PNG"
+    sell_button_2 = "C:\\project\\DBG_Automation\\img\\gear\\sell_button_2.PNG"
+
     #Anti-Cheat Paths
     click_prompt = "C:\\project\\DBG_Automation\\img\\anti-cheat\\click.PNG"
 
@@ -121,4 +133,24 @@ def level_battle_skill(img_skill):
     event.search_click_offset(img_skill, 435, 34)
     print("done")
 
-#def sell_gear():
+def sell_hunt_gear():
+    gears = [
+        image.helmet_tab.value,
+        image.armour_tab.value,
+        image.boots_tab.value,
+        image.ring_tab.value
+    ]
+
+    if event.find_image(image.weapons.value) == True:
+        event.click_next_screen_validate(image.weapons.value, image.gears.value)
+    else:
+        event.search_click(image.gears.value)
+
+    for gear in gears:
+        event.search_click(gear)
+        event.search_click(image.sell_button.value)
+        event.search_click_offset(image.bs_logo.value, 1090, 245)
+        event.search_click_offset(image.bs_logo.value, 1090, 325)
+        event.search_click_offset(image.bs_logo.value, 1090, 400)
+        event.search_click(image.sell_button_2.value)
+        event.search_click_offset(image.bs_logo.value, 500, 500)

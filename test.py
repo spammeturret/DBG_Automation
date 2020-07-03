@@ -7,6 +7,7 @@ import battle
 import rewinder
 import enum
 import game_functions as game
+
 import wrappers as event
 
 class image(enum.Enum):
@@ -16,6 +17,10 @@ class image(enum.Enum):
     leviathan_button = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\leviathan_button.PNG"
     leviathan_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\leviathan_1.PNG"
     cheat_click = "C:\\project\\DBG_Automation\\img\\anti-cheat\\click.png"
+    weapons = "C:\\project\\DBG_Automation\\img\\gear\\weapons.PNG"
+    gears = "C:\\project\\DBG_Automation\\img\\gear\\gears.PNG"
+    insufficient_slots = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\insufficient_slots.PNG"
+
 
 #Initialisation
 json_dailies = "C:\\project\\DBG_Automation\\data\\dailies.json"
@@ -37,8 +42,8 @@ rewinder = rewinder.Rewinder()
 
 #Main Loop
 x = 0
-
-game.complete_idle_check()
+#event.find_image(image.insufficient_slots.value)
+battle.hunt(image.leviathan_button.value, image.leviathan_1.value, 10)
 # while x == 0:
 #     try:
         
