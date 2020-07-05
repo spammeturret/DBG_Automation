@@ -151,7 +151,7 @@ def hunt(boss_type, level, repeat_number):
     if inventory_full_flag == False:
         event.search_click(image.ok_button.value)
         game.macro_start(image.normal_macro.value)
-        while i < repeat_number or exit_flag == True:
+        while i < repeat_number or exit_flag == False:
             if event.find_image(image.hunt_over.value, True) == True:
                 i += 1
                 print("Hunt Count:", i)

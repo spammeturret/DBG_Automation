@@ -20,6 +20,9 @@ class image(enum.Enum):
     weapons = "C:\\project\\DBG_Automation\\img\\gear\\weapons.PNG"
     gears = "C:\\project\\DBG_Automation\\img\\gear\\gears.PNG"
     insufficient_slots = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\insufficient_slots.PNG"
+    asmodeus_button = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\asmodeus_button.PNG"
+    asmodeus_1 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\asmodeus_1.PNG"
+    asmodeus_2 = "C:\\project\\DBG_Automation\\img\\battle\\hunt\\asmodeus_2.PNG"
 
 
 #Initialisation
@@ -43,8 +46,7 @@ rewinder = rewinder.Rewinder()
 #Main Loop
 x = 0
 #event.find_image(image.insufficient_slots.value)
-battle.hunt(image.leviathan_button.value, image.leviathan_1.value, 10)
-# while x == 0:
+battle.hunt(image.asmodeus_button.value, image.asmodeus_1.value, 1)# while x == 0:
 #     try:
         
 #         # if daily_status["status"]["all_completed"] == False:
